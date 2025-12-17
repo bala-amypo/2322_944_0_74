@@ -19,8 +19,13 @@ public class Newseviceimpl implements Newservice{
     }
     @Override
     public Newentity update(Long id,Newentity new){
-        
+        Newentity existing=getidval(id);
+        existing.setName(newfile.getName());
+        existing.setEmail(newfile.getEmail());
+        return rep.save(existing);
     }
+    @Override
+    
 
 
 }
