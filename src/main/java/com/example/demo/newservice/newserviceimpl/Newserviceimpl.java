@@ -15,11 +15,11 @@ public class Newseviceimpl implements Newservice{
     }
     @Override
     public List<Newentity>getall(){
-        
+        return rep.findAll();
     }
     @Override
     public Newentity update(Long id,Newentity new){
-
+        
     }
 
 
