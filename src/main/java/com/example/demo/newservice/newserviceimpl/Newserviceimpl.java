@@ -25,7 +25,9 @@ public class Newseviceimpl implements Newservice{
         return rep.save(existing);
     }
     @Override
-    
+    public void Delete(Long id){
+        return rep.save(existing);
+    }
 
 
 }
