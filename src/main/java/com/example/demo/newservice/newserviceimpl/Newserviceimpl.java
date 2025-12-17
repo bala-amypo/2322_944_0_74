@@ -11,15 +11,15 @@ public class Newseviceimpl implements Newservice{
     }
     @Override
     public Newentity getidval(Long id){
-
+        return rep.findById(id);
     }
     @Override
     public List<Newentity>getall(){
-
+        
     }
     @Override
     public Newentity update(Long id,Newentity new){
-        
+
     }
 
 
