@@ -1,1 +1,3 @@
-interface c
+public interface StudentRepo extends JpaRepository<Student,Long>{
+    
+}
