@@ -12,7 +12,6 @@ import com.example.demo.newservice.Newservice;
 public class Newcontroller {
 
     @Autowired
-    Studentservice src;
 
     @PostMapping("/post")
     public Studententity postdata(@RequestBody Newentity new) {
@@ -30,11 +29,11 @@ public class Newcontroller {
     }
     @PutMapping("/update/{id}")
     public Newentity putdata(@PathVariable Long id,@RequestBody Newentity new){
-        return src.retputdata(id,new);
+        return src.putdata(id,new);
     }
     @DeleteMapping("/delete/{id}")
-    public Newentity deletedata(@PathVariable int id){
-        return src.retdeldata(id);
+    public void deletedata(@PathVariable long id){
+        return src.deldata(id);
     }
 
 
