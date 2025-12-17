@@ -1,21 +1,27 @@
-package com.example.demo.newentity;
+package com.example.demo.entity;
+
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 @Entity
-@
-public class Newentity{
+
+public class Studententity {
     @Id
-    @GeneratedValue(Strategy=GenerationType.IDENTITY)
+    @Generatedvalue(strategy=GenerationType.IDENTITY);
     private Long id;
-    @NotBlank(message="should not blank")
-    private Stirng name;
+    @NotBlank(message= "should not contain spaces")
+    private  String name;
+    @NotBlank(message= "no blank allowed")
     @Email(message="invalid format")
-    private String DOB;
-    public Studententity() {
+    @Column(name=unique)
+    private String email;
+    private String password;
+    private String role;
+    public Long getId() {
+        return id;
     }
-    public Newentity(String name, String DOB, int id) {
-        this.name = name;
-        this.DOB = DOB;
+    public void setId(Long id) {
         this.id = id;
     }
     public String getName() {
@@ -24,16 +30,36 @@ public class Newentity{
     public void setName(String name) {
         this.name = name;
     }
-    public String getDOB() {
-        return DOB;
+    public String getEmail() {
+        return email;
     }
-    public void setDOB(String DOB) {
-        this.DOB = DOB;
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public int getId() {
-        return id;
+    public String getPassword() {
+        return password;
     }
-    public void setId(int id) {
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+    
+    public Studententity(Long id, @NotBlank(message = "should not contain spaces") String name,
+            @NotBlank(message = "no blank allowed") @Email(message = "invalid format") String email, String password,
+            String role) {
         this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.role = role;
     }
+    public Studententity() {
+    }
+    
 }
