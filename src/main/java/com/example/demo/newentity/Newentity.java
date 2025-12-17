@@ -2,6 +2,7 @@ package com.example.demo.newentity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 @Entity
+@
 public class Newentity{
     @Id
     @GeneratedValue(Strategy=GenerationType.IDENTITY)
