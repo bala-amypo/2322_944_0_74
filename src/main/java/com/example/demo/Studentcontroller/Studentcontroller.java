@@ -33,6 +33,6 @@ public class Studentcontroller {
 
     @GetMapping("/getid/{id}")
     public Studententity getIdValue(@PathVariable int id) {
-        return src.id(id);
+        return new Studententity("John", "2000-01-01", id);
     }
 }
