@@ -32,16 +32,16 @@ public class Studentcontroller {
     }
 
 
-    @PutMapping("/update/{id}")
-    public Studententity updatedata(
-            @PathVariable int id,
-            @RequestBody Studententity st) {
-        return src.updatedata(id, st);
-    }
+    // @PutMapping("/update/{id}")
+    // public Studententity updatedata(
+    //         @PathVariable int id,
+    //         @RequestBody Studententity st) {
+    //     return src.updatedata(id, st);
+    // }
 
 
-    @DeleteMapping("/delete/{id}")
-    public String deletedata(@PathVariable int id) {
-        return src.deletedata(id);
-    }
+    // @DeleteMapping("/delete/{id}")
+    // public String deletedata(@PathVariable int id) {
+    //     return src.deletedata(id);
+    // }
 }
