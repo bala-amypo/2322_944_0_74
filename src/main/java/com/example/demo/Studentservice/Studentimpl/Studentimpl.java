@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.Studententity.Studententity;
 
 @Service
-public class Studentservice implements StudentServiceInterface {
+public class Studentservice implements Studentimpl {
 
     private Map<Integer, Studententity> mp = new HashMap<>();
 
