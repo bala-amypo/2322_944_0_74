@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.Studententity.Studententity;
-import com.example.demo.Studentservice.StudentServiceInterface;
+import com.example.demo.Studentservice.Studentservice;
 
 @RestController
 public class Studentcontroller {
 
     @Autowired
-    StudentServiceInterface src;
+    Studentservice src;
 
 
     @PostMapping("/post")

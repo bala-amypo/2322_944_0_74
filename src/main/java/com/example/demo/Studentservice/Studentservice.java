@@ -3,7 +3,7 @@ package com.example.demo.Studentservice;
 import java.util.List;
 import com.example.demo.Studententity.Studententity;
 
-public interface StudentServiceInterface {
+public interface Studentservice {
 
     Studententity savedata(Studententity st);
 
