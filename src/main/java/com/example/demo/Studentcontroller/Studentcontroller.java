@@ -35,6 +35,4 @@ public class Studentcontroller {
     public Studententity getIdValue(@PathVariable int id) {
         return src.id(id);
     }
-
-
 }

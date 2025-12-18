@@ -1,4 +1,4 @@
-package com.example.sriram.Studententity;
+package com.example.demo.Studententity;
 
 public class Studententity {
 

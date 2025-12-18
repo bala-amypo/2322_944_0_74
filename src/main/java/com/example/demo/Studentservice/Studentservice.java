@@ -1,4 +1,4 @@
-package com.example.sriram.Studentservice;
+package com.example.demo.Studentservice;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.example.sriram.Studententity.Studententity;
+import com.example.demo.Studententity.Studententity;
 
 @Service
 public class Studentservice {
