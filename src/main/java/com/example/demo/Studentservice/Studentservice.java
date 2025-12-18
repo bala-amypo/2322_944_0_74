@@ -11,7 +11,7 @@ public interface StudentServiceInterface {
 
     Studententity id(int id);
 
-    Studententity updatedata(int id, Studententity st);
+    // Studententity updatedata(int id, Studententity st);
 
-    String deletedata(int id);
+    // String deletedata(int id);
 }
