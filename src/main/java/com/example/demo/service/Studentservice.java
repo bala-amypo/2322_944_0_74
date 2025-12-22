@@ -1,17 +1,17 @@
-package com.example.demo.Studentservice;
+package com.example.demo.service;
 
 import java.util.List;
-import com.example.demo.Studententity.Studententity;
+import com.example.demo.entity.Studententity;
 
-public interface Studentservice {
+public interface Studentservices {
 
-    Studententity savedata(Studententity st);
+    Studententity postdata(Studententity st);
 
-    List<Studententity> retdata();
+    List<Studententity> getdata();
 
-    Studententity id(int id);
+    Studententity getIdValue(Long id);
 
-    // Studententity updatedata(int id, Studententity st);
+    Studententity update(Long id, Studententity st);
 
-    // String deletedata(int id);
+    void delete(Long id);
 }

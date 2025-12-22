@@ -1,47 +1,47 @@
-package com.example.demo.Studentcontroller;
+package com.example.demo.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.Studententity.Studententity;
-import com.example.demo.Studentservice.Studentservice;
+import com.example.demo.entity.Studententity;
+import com.example.demo.service.Studentservices;
 
 @RestController
+@RequestMapping("/api/students")
 public class Studentcontroller {
 
-    @Autowired
-    Studentservice src;
+    private final Studentservices src;
 
-
-    @PostMapping("/post")
-    public Studententity postdata(@RequestBody Studententity st) {
-        return src.savedata(st);
+   
+    public Studentcontroller(Studentservices src) {
+        this.src = src;
     }
 
+    @PostMapping("/post")
+    public Studententity insertData(@RequestBody Studententity st) {
+        return src.postdata(st);
+    }
 
     @GetMapping("/get")
-    public List<Studententity> getdata() {
-        return src.retdata();
+    public List<Studententity> wantData() {
+        return src.getdata();
     }
 
     @GetMapping("/getid/{id}")
-    public Studententity getIdValue(@PathVariable int id) {
-        return src.id(id);
+    public Studententity particularData(@PathVariable Long id) {
+        return src.getIdValue(id);
     }
 
+    @PutMapping("/{id}")
+    public Studententity updateData(@PathVariable Long id,
+                                    @RequestBody Studententity st) {
+        return src.update(id, st);
+    }
 
-    // @PutMapping("/update/{id}")
-    // public Studententity updatedata(
-    //         @PathVariable int id,
-    //         @RequestBody Studententity st) {
-    //     return src.updatedata(id, st);
-    // }
+    @DeleteMapping("/{id}")
+    public void deleteData(@PathVariable Long id) {
+    src.delete(id);   
 
-
-    // @DeleteMapping("/delete/{id}")
-    // public String deletedata(@PathVariable int id) {
-    //     return src.deletedata(id);
-    // }
+}
 }
