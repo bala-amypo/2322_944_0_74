@@ -12,7 +12,7 @@ import com.example.demo.service.Studentservices;
 public class StudentserviceImpl implements Studentservices {
 
     private final StudentRepo rep;
-
+    
     public StudentserviceImpl(StudentRepo rep) {
         this.rep = rep;
     }
